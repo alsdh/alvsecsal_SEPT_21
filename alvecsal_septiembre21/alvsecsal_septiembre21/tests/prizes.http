@@ -1,0 +1,61 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+# 
+GET {{BASE}}/awards
+
+####
+GET {{BASE}}/awards/1
+
+####
+POST {{BASE}}/awards
+Content-Type: application/json
+
+{
+    "studentId": 1 ,
+    "degreeId": 1,
+    "award": ,
+    "year":"2021",
+    "note":"10"
+}
+
+####
+DELETE {{BASE}}/awards/1
+
+
+####
+PUT {{BASE}}/awards/1
+Content-Type: application/json
+
+{
+"studentId": 2 ,
+"degreeId": 1,
+"award": 7,
+"year":"2020",
+"note":"9"
+}
+
+
+///Pruebas
+
+####
+POST {{BASE}}/awards
+Content-Type: application/json
+{
+"studentId": 1 ,
+"degreeId": 1,
+"award": 1,
+"year":"2021",
+"note":"9"
+}
+
+
+####
+POST {{BASE}}/awards
+Content-Type: application/json
+{
+"studentId": 3 ,
+"degreeId": 2,
+"award": 1,
+"year":"2021",
+"note":"2"
+}

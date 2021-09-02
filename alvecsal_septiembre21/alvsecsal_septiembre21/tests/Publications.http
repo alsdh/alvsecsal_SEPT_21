@@ -1,0 +1,61 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+# 
+GET {{BASE}}/publications
+
+####
+GET {{BASE}}/publications/0
+
+####
+POST {{BASE}}/publications
+Content-Type: application/json
+
+{
+    "name": "alvaro" ,
+    "professorId":1,
+    "total": 3,
+    "date":"2000-1-1",
+    "paper":"paper1"
+}
+
+####
+DELETE {{BASE}}/publications/1
+
+
+####
+PUT {{BASE}}/publications/2
+Content-Type: application/json
+
+{
+"name": "alvaro" ,
+"professorId":1,
+"total":5,
+"date":"2000-1-1",
+"paper":"paper2"
+}
+
+
+///Pruebas
+
+####
+POST {{BASE}}/publications
+Content-Type: application/json
+{
+"name": "alvaro" ,
+"professorId":1,
+"total":2,
+"date":"2000-1-1",
+"paper":"paper1"
+}
+
+
+####
+POST {{BASE}}/publications
+Content-Type: application/json
+{
+"name": "alvaro" ,
+"professorId":1,
+"total":20,
+"date":"2000-1-1",
+"paper":"paper3"
+}

@@ -1,0 +1,56 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+# 
+GET {{BASE}}/Commissions
+
+####
+GET {{BASE}}/Commissions/2
+
+####
+POST {{BASE}}/Commissions
+Content-Type: application/json
+{
+"commissionN":"alvaro",
+"professorId":1,
+"people": 1,
+"date":"2000-1-1"
+}
+
+####
+DELETE {{BASE}}/Commissions/1
+
+
+####
+PUT {{BASE}}/Commissions/2
+Content-Type: application/json
+{
+"commissionN":"alvarooo",
+"professorId":1,
+"people": 2,
+"date":"2000-1-1"
+}
+
+
+///Pruebas
+
+####
+POST {{BASE}}/Commissions
+Content-Type: application/json
+{
+"commissionN":"alvaro1",
+"professorId":1,
+"people": 2,
+"date":"2000-1-1"
+}
+
+
+
+####
+POST {{BASE}}/Commissions
+Content-Type: application/json
+{
+"commissionN":"alvaro1",
+"professorId":1,
+"people": 0,
+"date":"2000-1-1"
+}

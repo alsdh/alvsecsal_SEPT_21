@@ -1,0 +1,61 @@
+@BASE = http://127.0.0.1:8080/api/v1
+
+# 
+GET {{BASE}}/revisions
+
+####
+GET {{BASE}}/revisions/2
+
+####
+POST {{BASE}}/revisions
+Content-Type: application/json
+{
+"note": 4,
+"gradeId":1,
+"professorId":1,
+"date":"2001-1-1",
+"diference": 1
+}
+
+####
+DELETE {{BASE}}/revisions/2
+
+
+####
+PUT {{BASE}}/revisions/2
+Content-Type: application/json
+{
+"note": 6,
+"gradeId":1,
+"professorId":1,
+"date":"2001-1-20",
+"diference": 1
+}
+
+
+
+
+///Pruebass
+
+####
+POST {{BASE}}/revisions
+Content-Type: application/json
+{
+"note": 6,
+"gradeId":1,
+"professorId":1,
+"date":"2001-1-1",
+"diference": 3
+}
+
+
+####
+PUT {{BASE}}/revisions/2
+Content-Type: application/json
+{
+"note": 3,
+"gradeId":2,
+"professorId":1,
+"date":"2001-1-1",
+"diference": 7
+}
